@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonderful - Immersive Theatre Experiences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1cb6b0',secondary:'#f4b942'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=immersive%20theatre%20performance%20with%20dramatic%20lighting%2C%20performers%20in%20elegant%20costumes%20interacting%20with%20audience%20members%20in%20a%20professional%20setting%2C%20corporate%20executives%20watching%20with%20interest%2C%20artistic%20theatrical%20environment%20with%20teal%20and%20turquoise%20lighting%20accents%2C%20mustard%20yellow%20highlights%2C%20modern%20clean%20aesthetic%2C%20no%20text%20visible&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #1cb6b0;
+}
+.service-icon {
+transition: all 0.3s ease;
+}
+.service-icon:hover {
+transform: scale(1.05);
+}
+.testimonial-slider {
+scroll-behavior: smooth;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Sonderful</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="font-medium text-gray-900 hover:text-primary transition">Home</a>
+<a href="#corporate" class="font-medium text-gray-700 hover:text-primary transition">Corporate</a>
+<a href="#universities" class="font-medium text-gray-700 hover:text-primary transition">Universities</a>
+<a href="#about" class="font-medium text-gray-700 hover:text-primary transition">About Us</a>
+<a href="#contact" class="font-medium text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Book Experience</button>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white absolute w-full border-t border-gray-100" id="mobile-menu">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="#" class="font-medium text-gray-900 py-2 hover:text-primary transition">Home</a>
+<a href="#corporate" class="font-medium text-gray-700 py-2 hover:text-primary transition">Corporate</a>
+<a href="#universities" class="font-medium text-gray-700 py-2 hover:text-primary transition">Universities</a>
+<a href="#about" class="font-medium text-gray-700 py-2 hover:text-primary transition">About Us</a>
+<a href="#contact" class="font-medium text-gray-700 py-2 hover:text-primary transition">Contact</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap w-full">Book Experience</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center pt-16">
+<div class="hero-overlay w-full h-full absolute top-0 left-0"></div>
+<div class="container mx-auto px-4 py-20 relative z-10 w-full">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Transform Through Immersive Theatre Experiences</h1>
+<p class="text-xl text-gray-200 mb-8 max-w-2xl">Sonderful creates powerful, transformative experiences that inspire growth, collaboration, and innovation for corporates and universities alike.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#corporate" class="bg-secondary text-gray-900 px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap text-center">For Corporates</a>
+<a href="#universities" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap text-center">For Universities</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Sonderful?</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Our immersive theatre experiences create lasting impact through emotional engagement and active participation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-emotion-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Emotional Connection</h3>
+<p class="text-gray-600">Our experiences create deep emotional connections that drive lasting behavioral change and learning retention.</p>
+<div class="mt-6 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 94%"></div>
+</div>
+<p class="mt-2 text-sm text-gray-500">94% participant emotional engagement</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-team-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Collaborative Growth</h3>
+<p class="text-gray-600">Our methodology fosters genuine collaboration, breaking down barriers and building stronger teams.</p>
+<div class="mt-6 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 87%"></div>
+</div>
+<p class="mt-2 text-sm text-gray-500">87% improved team dynamics</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-lightbulb-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Innovative Approach</h3>
+<p class="text-gray-600">Our unique blend of theatre and psychology creates experiences that challenge perspectives and inspire innovation.</p>
+<div class="mt-6 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+<p class="mt-2 text-sm text-gray-500">92% reported new perspectives</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Corporate Section -->
+<section id="corporate" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">For Corporates</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Elevate your team's performance through our tailored immersive experiences designed for the corporate environment.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 mb-16">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=elegant%20corporate%20training%20session%20in%20a%20modern%20minimalist%20office%20space%2C%20professionals%20in%20business%20attire%20engaged%20in%20focused%20discussion%2C%20clean%20and%20sophisticated%20environment%20with%20subtle%20lighting%2C%20muted%20professional%20color%20palette&width=600&height=400&seq=2&orientation=landscape" alt="Corporate Workshop" class="rounded-lg shadow-lg w-full h-auto object-cover object-top">
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Transform Your Team</h3>
+<p class="text-gray-600 mb-6">Our corporate programs leverage the power of immersive theatre to address your organization's unique challenges and opportunities. Through carefully crafted experiences, we help teams develop essential skills, strengthen relationships, and drive innovation.</p>
+<div class="mb-8">
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Improved communication across departments</p>
+</div>
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Enhanced leadership capabilities</p>
+</div>
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Increased team cohesion and trust</p>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Boosted creativity and problem-solving</p>
+</div>
+</div>
+<a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Request Corporate Program</a>
+</div>
+</div>
+<!-- Corporate Services Infographics -->
+<div class="mb-16">
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Our Corporate Services</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-compass-3-line ri-lg text-primary"></i>
+</div>
+<h4 class="text-xl font-semibold text-gray-900">Strategic Leadership</h4>
+</div>
+<p class="text-gray-600 mb-4">Develop authentic leadership capabilities through immersive scenarios.</p>
+<div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-team-line ri-lg text-primary"></i>
+</div>
+<h4 class="text-xl font-semibold text-gray-900">Team Excellence</h4>
+</div>
+<p class="text-gray-600 mb-4">Build high-performing teams through collaborative experiences.</p>
+<div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-lightbulb-line ri-lg text-primary"></i>
+</div>
+<h4 class="text-xl font-semibold text-gray-900">Innovation Culture</h4>
+</div>
+<p class="text-gray-600 mb-4">Foster creativity and strategic thinking across your organization.</p>
+<div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-compass-3-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Leadership Development</h4>
+<p class="text-gray-600 text-sm">Cultivate authentic leadership skills through immersive scenarios that challenge and inspire.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">92% leadership confidence increase</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-puzzle-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Team Building Workshops</h4>
+<p class="text-gray-600 text-sm">Strengthen bonds through collaborative theatrical exercises designed to build trust and understanding.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 95%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">95% improved team cohesion</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-message-3-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Communication Skills</h4>
+<p class="text-gray-600 text-sm">Master verbal and non-verbal communication through dynamic role-playing and feedback sessions.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 89%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">89% communication effectiveness</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-shield-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Crisis Management</h4>
+<p class="text-gray-600 text-sm">Develop resilience and quick thinking through simulated crisis scenarios in a safe environment.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 87%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">87% improved crisis response</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-lightbulb-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Innovation & Creativity</h4>
+<p class="text-gray-600 text-sm">Unlock creative potential through boundary-pushing exercises that inspire new ways of thinking.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 94%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">94% increased innovative thinking</p>
+</div>
+</div>
+</div>
+<!-- Corporate Case Study -->
+<div class="bg-white p-8 rounded-lg shadow-lg mb-16">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Case Study: Global Tech Firm</h3>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20professional%20tech%20employees%20in%20a%20modern%20office%20space%20participating%20in%20a%20theatrical%20workshop%2C%20expressions%20of%20engagement%20and%20discovery%2C%20corporate%20setting%20with%20subtle%20tech%20elements%2C%20professional%20attire%2C%20facilitator%20guiding%20the%20group&width=400&height=300&seq=3&orientation=landscape" alt="Tech Company Case Study" class="rounded-lg shadow w-full h-auto object-cover object-top">
+</div>
+<div class="md:w-2/3">
+<p class="text-gray-600 mb-6">When a leading global technology company faced challenges with cross-departmental collaboration, they turned to Sonderful for a solution. Through a series of tailored immersive experiences, we helped break down silos and foster a culture of open communication.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">68%</p>
+<p class="text-sm text-gray-600">Increase in cross-team collaboration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">42%</p>
+<p class="text-sm text-gray-600">Reduction in project delivery time</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">93%</p>
+<p class="text-sm text-gray-600">Participant satisfaction rate</p>
+</div>
+</div>
+<blockquote class="italic text-gray-700 border-l-4 border-primary pl-4">
+"Sonderful's approach was unlike anything we'd experienced before. By engaging our teams through immersive theatre, they created powerful moments of connection that transformed our workplace culture. The impact has been measurable and lasting."
+<footer class="mt-2 text-sm text-gray-600 not-italic">— Catherine Reynolds, Chief People Officer</footer>
+</blockquote>
+</div>
+</div>
+</div>
+<!-- Corporate Testimonials -->
+<div>
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">What Our Corporate Clients Say</h3>
+<div class="relative">
+<div class="testimonial-slider flex overflow-x-auto gap-6 pb-8 hide-scrollbar" id="corporate-testimonials">
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Michael Thornton</h4>
+<p class="text-sm text-gray-600">Director of HR, Elevate Solutions</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"The leadership development program Sonderful created for our executive team was transformative. The immersive approach helped our leaders connect with their authentic selves and develop genuine empathy for their teams."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Priya Sharma</h4>
+<p class="text-sm text-gray-600">Team Lead, Innovate Financial</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"After our merger, we struggled with cultural integration. Sonderful's team-building workshop helped us bridge divides and create a unified culture. Six months later, we're still seeing the positive effects."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">James Wilson</h4>
+<p class="text-sm text-gray-600">CEO, Nexus Creative</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"As a creative agency, we thought we knew everything about innovation. Sonderful's workshop challenged our assumptions and helped us break through creative blocks. The results have been incredible."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+</div>
+<button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="corporate-prev">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="corporate-next">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- University Section -->
+<section id="universities" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">For Universities</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Empower students with transformative experiences that develop essential life skills and prepare them for future success.</p>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-12 mb-16">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=vibrant%20university%20learning%20space%20with%20students%20engaged%20in%20dynamic%20group%20activities%2C%20colorful%20modern%20campus%20environment%2C%20energetic%20atmosphere%2C%20interactive%20learning%20displays%2C%20young%20people%20collaborating%20with%20enthusiasm%2C%20bright%20and%20inspiring%20educational%20setting%20with%20creative%20elements&width=600&height=400&seq=4&orientation=landscape" alt="University Workshop" class="rounded-lg shadow-lg w-full h-auto object-cover object-top">
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Develop Future-Ready Graduates</h3>
+<p class="text-gray-600 mb-6">Our university programs help students develop the soft skills that are increasingly valued in today's workplace. Through immersive theatre experiences, students learn to collaborate effectively, communicate confidently, and think creatively.</p>
+<div class="mb-8">
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Enhanced self-confidence and presentation skills</p>
+</div>
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Improved emotional intelligence and empathy</p>
+</div>
+<div class="flex items-center mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Strengthened collaborative problem-solving</p>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3">
+<i class="ri-check-line"></i>
+</div>
+<p class="font-medium text-gray-800">Developed adaptability and resilience</p>
+</div>
+</div>
+<a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Request University Program</a>
+</div>
+</div>
+<!-- University Services Infographics -->
+<div class="mb-16">
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Our University Services</h3>
+<!-- University Impact Metrics -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-white p-6 rounded-lg shadow-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-6">Student Outcomes</h3>
+<div id="student-outcomes-chart" class="w-full h-80"></div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-6">Skills Development Progress</h3>
+<div id="student-skills-chart" class="w-full h-80"></div>
+</div>
+</div>
+<div class="relative flex justify-center items-center mb-12">
+<div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+<div class="col-start-2">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-1">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-plant-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Personal Growth</h4>
+<p class="text-sm text-gray-600">Build confidence through guided self-discovery</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+<div class="col-start-1">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-1">
+<div class="w-20 h-20 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-team-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Team Spirit</h4>
+<p class="text-sm text-gray-600">Foster collaboration through group activities</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+<div class="col-start-3">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-1">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-global-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Global Mindset</h4>
+<p class="text-sm text-gray-600">Develop international perspectives</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<div class="col-start-2">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-1">
+<div class="w-20 h-20 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-graduation-cap-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Academic Excellence</h4>
+<p class="text-sm text-gray-600">Enhance learning through experience</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<div class="col-start-1 col-span-3">
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-1">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-briefcase-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Career Launch</h4>
+<p class="text-sm text-gray-600">Prepare for professional success with real-world skills</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-plant-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Personal Development</h4>
+<p class="text-gray-600 text-sm">Build self-awareness and confidence through guided self-discovery and expression.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 91%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">91% increased self-confidence</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-hand-heart-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Peer Collaboration</h4>
+<p class="text-gray-600 text-sm">Develop essential teamwork skills through collaborative theatrical projects and exercises.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">88% improved teamwork skills</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-global-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Cultural Awareness</h4>
+<p class="text-gray-600 text-sm">Expand perspectives and develop empathy through diverse cultural narratives and experiences.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 94%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">94% increased cultural sensitivity</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-graduation-cap-line ri-2x text-secondary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Academic Performance</h4>
+<p class="text-gray-600 text-sm">Enhance learning retention and academic engagement through experiential education.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary rounded-full" style="width: 85%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">85% improved academic engagement</p>
+</div>
+<div class="service-icon bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-briefcase-line ri-2x text-primary"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Career Readiness</h4>
+<p class="text-gray-600 text-sm">Prepare for professional success through practical workplace scenarios and skill development.</p>
+<div class="mt-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 89%"></div>
+</div>
+<p class="mt-1 text-xs text-gray-500">89% increased career confidence</p>
+</div>
+</div>
+</div>
+<!-- University Success Story -->
+<div class="bg-white p-8 rounded-lg shadow-lg mb-16">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Success Story: Westfield University</h3>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20university%20students%20celebrating%20success%20after%20completing%20a%20theatrical%20workshop%2C%20campus%20environment%2C%20expressions%20of%20achievement%20and%20joy%2C%20academic%20setting%2C%20graduation-like%20atmosphere%2C%20young%20adults%20in%20casual%20attire%2C%20university%20buildings%20in%20background&width=400&height=300&seq=5&orientation=landscape" alt="University Success Story" class="rounded-lg shadow w-full h-auto object-cover object-top">
+</div>
+<div class="md:w-2/3">
+<p class="text-gray-600 mb-6">Westfield University partnered with Sonderful to address declining student engagement and prepare graduates for an increasingly competitive job market. Our semester-long program integrated with their curriculum to provide students with practical, experiential learning opportunities.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">76%</p>
+<p class="text-sm text-gray-600">Increase in student engagement</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">82%</p>
+<p class="text-sm text-gray-600">Improved graduate employment rates</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<p class="text-3xl font-bold text-primary mb-1">94%</p>
+<p class="text-sm text-gray-600">Student satisfaction with program</p>
+</div>
+</div>
+<blockquote class="italic text-gray-700 border-l-4 border-primary pl-4">
+"Sonderful's program has transformed our approach to student development. By integrating immersive theatre experiences into our curriculum, we've seen remarkable improvements in student engagement, confidence, and career readiness. It's been a game-changer for our institution."
+<footer class="mt-2 text-sm text-gray-600 not-italic">— Dr. Eleanor Matthews, Dean of Student Affairs</footer>
+</blockquote>
+</div>
+</div>
+</div>
+<!-- University Testimonials -->
+<div>
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">What Students & Educators Say</h3>
+<div class="relative">
+<div class="testimonial-slider flex overflow-x-auto gap-6 pb-8 hide-scrollbar" id="university-testimonials">
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+<p class="text-sm text-gray-600">Business Student, Class of 2025</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"The Sonderful workshop was unlike any class I've taken. It pushed me out of my comfort zone in the best possible way. I've always struggled with public speaking, but the techniques I learned have made me so much more confident."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Professor Thomas Chen</h4>
+<p class="text-sm text-gray-600">Communications Department</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"Integrating Sonderful's program into our curriculum has revolutionized our teaching approach. Students are more engaged, more creative, and developing practical skills that traditional lectures simply can't provide."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Alex Washington</h4>
+<p class="text-sm text-gray-600">Engineering Student, Class of 2024</p>
+</div>
+</div>
+<p class="text-gray-700 mb-4">"As an engineering student, I was skeptical about how theatre could help me. But the collaborative problem-solving skills I developed have been invaluable. I reference what I learned in job interviews all the time."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+</div>
+<button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="university-prev">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="university-next">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metrics -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">We measure our success through the tangible outcomes our clients experience. Here's what our data shows:</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+<div class="bg-white p-6 rounded-lg shadow-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-6">Performance Improvement</h3>
+<div id="performance-chart" class="w-full h-80"></div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-6">Skill Development</h3>
+<div id="skills-chart" class="w-full h-80"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-group-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-2">15,000+</h3>
+<p class="text-gray-600">Participants Transformed</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-building-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-2">200+</h3>
+<p class="text-gray-600">Corporate Partners</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-school-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-2">75+</h3>
+<p class="text-gray-600">University Collaborations</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-global-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-2">18</h3>
+<p class="text-gray-600">Countries Reached</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Sonderful</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">We're a team of theatre professionals, psychologists, and educators passionate about creating transformative experiences.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 mb-16">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=diverse%20team%20of%20professional%20facilitators%20and%20theatre%20practitioners%20in%20a%20creative%20meeting%2C%20mix%20of%20ages%20and%20ethnicities%2C%20collaborative%20workspace%2C%20artistic%20environment%2C%20expressions%20of%20creativity%20and%20engagement%2C%20modern%20office%20with%20theatrical%20elements%2C%20professional%20casual%20attire&width=600&height=400&seq=6&orientation=landscape" alt="Sonderful Team" class="rounded-lg shadow-lg w-full h-auto object-cover object-top">
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
+<p class="text-gray-600 mb-6">Sonderful was born from a simple observation: the most powerful learning happens through experience, not instruction. Our founders, a theatre director and an organizational psychologist, combined their expertise to create immersive experiences that drive meaningful change.</p>
+<p class="text-gray-600 mb-6">Since our founding in 2018, we've worked with organizations across the globe, from Fortune 500 companies to leading universities. Our approach is grounded in research but delivered through art, creating memorable experiences that inspire lasting transformation.</p>
+<h4 class="text-xl font-semibold text-gray-900 mb-3">Our Philosophy</h4>
+<div class="mb-6">
+<div class="flex items-start mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
+<i class="ri-heart-line"></i>
+</div>
+<p class="text-gray-600"><span class="font-medium text-gray-900">Emotional Connection</span>: We believe that learning must engage the heart as well as the mind.</p>
+</div>
+<div class="flex items-start mb-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
+<i class="ri-team-line"></i>
+</div>
+<p class="text-gray-600"><span class="font-medium text-gray-900">Collaborative Growth</span>: True development happens in community, not in isolation.</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
+<i class="ri-lightbulb-line"></i>
+</div>
+<p class="text-gray-600"><span class="font-medium text-gray-900">Creative Innovation</span>: The most powerful solutions emerge when we think beyond conventional boundaries.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Section -->
+<div class="mb-16">
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Meet Our Team</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20theatre%20director%20in%20her%2040s%2C%20warm%20smile%2C%20creative%20but%20professional%20appearance%2C%20neutral%20background%2C%20high%20quality%20portrait%2C%20looking%20directly%20at%20camera&width=300&height=300&seq=7&orientation=squarish" alt="Sarah Mitchell" class="w-full h-auto object-cover object-top">
+<div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="text-white p-4 text-center">
+<p class="mb-2">Former Broadway director with 15+ years experience in immersive theatre.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h4 class="font-semibold text-gray-900">Sarah Mitchell</h4>
+<p class="text-sm text-gray-600">Co-Founder & Creative Director</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20male%20organizational%20psychologist%20in%20his%2050s%2C%20glasses%2C%20thoughtful%20expression%2C%20diverse%20ethnicity%2C%20neutral%20background%2C%20high%20quality%20portrait%2C%20looking%20directly%20at%20camera&width=300&height=300&seq=8&orientation=squarish" alt="Dr. Marcus Chen" class="w-full h-auto object-cover object-top">
+<div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="text-white p-4 text-center">
+<p class="mb-2">PhD in Organizational Psychology with extensive research in experiential learning.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h4 class="font-semibold text-gray-900">Dr. Marcus Chen</h4>
+<p class="text-sm text-gray-600">Co-Founder & Research Director</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20education%20specialist%20in%20her%2030s%2C%20bright%20engaging%20smile%2C%20diverse%20ethnicity%2C%20approachable%20appearance%2C%20neutral%20background%2C%20high%20quality%20portrait%2C%20looking%20directly%20at%20camera&width=300&height=300&seq=9&orientation=squarish" alt="Aisha Patel" class="w-full h-auto object-cover object-top">
+<div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="text-white p-4 text-center">
+<p class="mb-2">Former university dean with expertise in curriculum development and student engagement.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h4 class="font-semibold text-gray-900">Aisha Patel</h4>
+<p class="text-sm text-gray-600">University Programs Director</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20male%20corporate%20trainer%20in%20his%2040s%2C%20confident%20smile%2C%20business%20professional%20appearance%2C%20diverse%20ethnicity%2C%20neutral%20background%2C%20high%20quality%20portrait%2C%20looking%20directly%20at%20camera&width=300&height=300&seq=10&orientation=squarish" alt="James Wilson" class="w-full h-auto object-cover object-top">
+<div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="text-white p-4 text-center">
+<p class="mb-2">20+ years experience in corporate training and leadership development at Fortune 500 companies.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h4 class="font-semibold text-gray-900">James Wilson</h4>
+<p class="text-sm text-gray-600">Corporate Programs Director</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline -->
+<div>
+<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Our Journey</h3>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+<!-- Timeline Items -->
+<div class="relative z-10">
+<!-- 2018 -->
+<div class="flex flex-col md:flex-row items-center mb-12">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2018</h4>
+<p class="text-gray-600">Sonderful is founded by Sarah Mitchell and Dr. Marcus Chen with a vision to transform learning through immersive theatre.</p>
+</div>
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-flag-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12"></div>
+</div>
+<!-- 2019 -->
+<div class="flex flex-col md:flex-row items-center mb-12">
+<div class="md:w-1/2 md:pr-12"></div>
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-building-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2019</h4>
+<p class="text-gray-600">Launch of our first corporate program with five Fortune 500 clients, establishing our methodology.</p>
+</div>
+</div>
+<!-- 2020 -->
+<div class="flex flex-col md:flex-row items-center mb-12">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2020</h4>
+<p class="text-gray-600">Pivoted to virtual immersive experiences during the pandemic, reaching clients globally.</p>
+</div>
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-global-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12"></div>
+</div>
+<!-- 2021 -->
+<div class="flex flex-col md:flex-row items-center mb-12">
+<div class="md:w-1/2 md:pr-12"></div>
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-school-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2021</h4>
+<p class="text-gray-600">Launched our university program, partnering with 25 institutions across North America.</p>
+</div>
+</div>
+<!-- 2023 -->
+<div class="flex flex-col md:flex-row items-center mb-12">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2023</h4>
+<p class="text-gray-600">Expanded to Europe and Asia, opening offices in London and Singapore.</p>
+</div>
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-earth-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12"></div>
+</div>
+<!-- 2025 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12"></div>
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center z-10 mx-4">
+<i class="ri-heart-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+<h4 class="text-xl font-semibold text-gray-900 mb-2">2025</h4>
+<p class="text-gray-600">Today, we continue to innovate and expand our impact, with a growing team dedicated to transformative experiences.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Ready to transform your organization or institution? Contact us to discuss how we can create a tailored experience for you.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-lg">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h3>
+<form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary" placeholder="Your email">
+</div>
+</div>
+<div class="mb-6">
+<label for="organization" class="block text-sm font-medium text-gray-700 mb-1">Organization</label>
+<input type="text" id="organization" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary" placeholder="Your organization">
+</div>
+<div class="mb-6">
+<label class="block text-sm font-medium text-gray-700 mb-1">I'm interested in:</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center">
+<div class="relative w-5 h-5 mr-2">
+<input type="radio" name="interest" value="corporate" class="sr-only">
+<div class="w-5 h-5 border border-gray-300 rounded-full"></div>
+<div class="absolute inset-0 hidden w-3 h-3 m-1 rounded-full bg-primary radio-selected"></div>
+</div>
+Corporate Programs
+</label>
+<label class="flex items-center">
+<div class="relative w-5 h-5 mr-2">
+<input type="radio" name="interest" value="university" class="sr-only">
+<div class="w-5 h-5 border border-gray-300 rounded-full"></div>
+<div class="absolute inset-0 hidden w-3 h-3 m-1 rounded-full bg-primary radio-selected"></div>
+</div>
+University Programs
+</label>
+<label class="flex items-center">
+<div class="relative w-5 h-5 mr-2">
+<input type="radio" name="interest" value="other" class="sr-only">
+<div class="w-5 h-5 border border-gray-300 rounded-full"></div>
+<div class="absolute inset-0 hidden w-3 h-3 m-1 rounded-full bg-primary radio-selected"></div>
+</div>
+Other Inquiry
+</label>
+</div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary" placeholder="Tell us about your needs"></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Our Offices</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">New York</h4>
+<p class="text-gray-600 mb-1">123 Broadway</p>
+<p class="text-gray-600 mb-1">New York, NY 10001</p>
+<p class="text-gray-600 mb-1">United States</p>
+<p class="text-gray-600">+1 (212) 555-1234</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">London</h4>
+<p class="text-gray-600 mb-1">45 Oxford Street</p>
+<p class="text-gray-600 mb-1">London, W1D 2DZ</p>
+<p class="text-gray-600 mb-1">United Kingdom</p>
+<p class="text-gray-600">+44 20 7123 4567</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Singapore</h4>
+<p class="text-gray-600 mb-1">78 Shenton Way</p>
+<p class="text-gray-600 mb-1">Singapore 068812</p>
+<p class="text-gray-600">+65 6123 4567</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Sydney</h4>
+<p class="text-gray-600 mb-1">240 George Street</p>
+<p class="text-gray-600 mb-1">Sydney, NSW 2000</p>
+<p class="text-gray-600 mb-1">Australia</p>
+<p class="text-gray-600">+61 2 9876 5432</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-4">Subscribe to Our Newsletter</h3>
+<p class="text-gray-600 mb-4">Stay updated with our latest insights, case studies, and event announcements.</p>
+<div class="flex">
+<input type="email" class="flex-grow px-4 py-2 border border-gray-300 rounded-l focus:ring-primary border-r-0" placeholder="Your email address">
+<button class="bg-primary text-white px-6 py-2 !rounded-button rounded-l-none font-medium hover:bg-opacity-90 transition whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">Sonderful</a>
+<p class="text-gray-400 mb-4">Transforming organizations and individuals through the power of immersive theatre experiences.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="#corporate" class="text-gray-400 hover:text-white transition">Corporate</a></li>
+<li><a href="#universities" class="text-gray-400 hover:text-white transition">Universities</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Resources</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Research</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-map-pin-line mr-2 mt-1"></i>
+<span class="text-gray-400">123 Broadway, New York, NY 10001</span>
+</li>
+<li class="flex items-start">
+<i class="ri-mail-line mr-2 mt-1"></i>
+<span class="text-gray-400">info@sonderful.com</span>
+</li>
+<li class="flex items-start">
+<i class="ri-phone-line mr-2 mt-1"></i>
+<span class="text-gray-400">+1 (212) 555-1234</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Sonderful. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+} else {
+mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+});
+});
+});
+</script>
+<script id="testimonial-slider-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Corporate testimonials
+const corporateSlider = document.getElementById('corporate-testimonials');
+const corporatePrev = document.getElementById('corporate-prev');
+const corporateNext = document.getElementById('corporate-next');
+corporateNext.addEventListener('click', function() {
+corporateSlider.scrollLeft += 400;
+});
+corporatePrev.addEventListener('click', function() {
+corporateSlider.scrollLeft -= 400;
+});
+// University testimonials
+const universitySlider = document.getElementById('university-testimonials');
+const universityPrev = document.getElementById('university-prev');
+const universityNext = document.getElementById('university-next');
+universityNext.addEventListener('click', function() {
+universitySlider.scrollLeft += 400;
+});
+universityPrev.addEventListener('click', function() {
+universitySlider.scrollLeft -= 400;
+});
+});
+</script>
+<script id="radio-button-script">
+document.addEventListener('DOMContentLoaded', function() {
+const radioInputs = document.querySelectorAll('input[type="radio"]');
+radioInputs.forEach(input => {
+const selectedIndicator = input.parentElement.querySelector('.radio-selected');
+// Set initial state
+if (input.checked) {
+selectedIndicator.classList.remove('hidden');
+}
+input.addEventListener('change', function() {
+// Hide all indicators
+document.querySelectorAll('.radio-selected').forEach(indicator => {
+indicator.classList.add('hidden');
+});
+// Show the selected one
+if (this.checked) {
+selectedIndicator.classList.remove('hidden');
+}
+});
+});
+});
+</script>
+<script id="charts-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Student Outcomes Chart
+const studentOutcomesChart = echarts.init(document.getElementById('student-outcomes-chart'));
+const studentOutcomesOption = {
+  animation: false,
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    textStyle: { color: '#1f2937' }
+  },
+  legend: {
+    data: ['Pre-Program', 'Post-Program'],
+    textStyle: { color: '#1f2937' }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'category',
+    data: ['Academic Performance', 'Career Readiness', 'Leadership Skills', 'Communication', 'Global Awareness'],
+    axisLabel: {
+      color: '#1f2937',
+      interval: 0,
+      rotate: 30
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    axisLabel: {
+      color: '#1f2937',
+      formatter: '{value}%'
+    }
+  },
+  series: [
+    {
+      name: 'Pre-Program',
+      type: 'bar',
+      itemStyle: { color: 'rgba(141, 211, 199, 1)' },
+      data: [45, 38, 42, 35, 30]
+    },
+    {
+      name: 'Post-Program',
+      type: 'bar',
+      itemStyle: { color: 'rgba(87, 181, 231, 1)' },
+      data: [85, 82, 88, 79, 75]
+    }
+  ]
+};
+studentOutcomesChart.setOption(studentOutcomesOption);
+// Student Skills Development Chart
+const studentSkillsChart = echarts.init(document.getElementById('student-skills-chart'));
+const studentSkillsOption = {
+  animation: false,
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    textStyle: { color: '#1f2937' }
+  },
+  radar: {
+    indicator: [
+      { name: 'Critical Thinking', max: 100 },
+      { name: 'Teamwork', max: 100 },
+      { name: 'Cultural Competency', max: 100 },
+      { name: 'Innovation', max: 100 },
+      { name: 'Adaptability', max: 100 }
+    ],
+    splitArea: {
+      areaStyle: {
+        color: ['rgba(255,255,255,0.5)']
+      }
+    },
+    axisLine: {
+      lineStyle: {
+        color: 'rgba(0,0,0,0.1)'
+      }
+    },
+    splitLine: {
+      lineStyle: {
+        color: 'rgba(0,0,0,0.1)'
+      }
+    }
+  },
+  series: [{
+    name: 'Skills Development',
+    type: 'radar',
+    data: [
+      {
+        value: [92, 88, 85, 90, 87],
+        name: 'Program Outcomes',
+        itemStyle: {
+          color: 'rgba(87, 181, 231, 1)'
+        },
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: 'rgba(87, 181, 231, 0.1)'
+            },
+            {
+              offset: 1,
+              color: 'rgba(87, 181, 231, 0.01)'
+            }
+          ])
+        }
+      }
+    ]
+  }]
+};
+studentSkillsChart.setOption(studentSkillsOption);
+// Corporate Services Chart
+const corporateServicesChart = echarts.init(document.getElementById('corporate-services-chart'));
+const corporateServicesOption = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: { color: '#1f2937' }
+},
+series: [{
+type: 'pie',
+radius: ['35%', '80%'],
+center: ['50%', '50%'],
+roseType: 'area',
+itemStyle: {
+borderRadius: 8,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: true,
+position: 'outside',
+formatter: '{b}',
+color: '#1f2937',
+fontSize: 14,
+fontWeight: 'bold'
+},
+labelLine: {
+show: true,
+length: 15,
+length2: 25
+},
+data: [
+{
+value: 95,
+name: 'Leadership Development',
+itemStyle: { color: 'rgba(87, 181, 231, 1)' }
+},
+{
+value: 90,
+name: 'Team Building',
+itemStyle: { color: 'rgba(141, 211, 199, 1)' }
+},
+{
+value: 85,
+name: 'Communication',
+itemStyle: { color: 'rgba(251, 191, 114, 1)' }
+},
+{
+value: 80,
+name: 'Crisis Management',
+itemStyle: { color: 'rgba(252, 141, 98, 1)' }
+},
+{
+value: 88,
+name: 'Innovation',
+itemStyle: { color: 'rgba(179, 179, 179, 1)' }
+}
+]
+}]
+};
+corporateServicesChart.setOption(corporateServicesOption);
+// Performance Improvement Chart
+const performanceChart = echarts.init(document.getElementById('performance-chart'));
+const performanceOption = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+data: ['Before Sonderful', 'After Sonderful'],
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+boundaryGap: false,
+data: ['Team Cohesion', 'Communication', 'Innovation', 'Leadership', 'Problem Solving'],
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'value',
+axisLabel: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Before Sonderful',
+type: 'line',
+smooth: true,
+lineStyle: {
+width: 3,
+color: 'rgba(141, 211, 199, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+{
+offset: 0,
+color: 'rgba(141, 211, 199, 0.1)'
+},
+{
+offset: 1,
+color: 'rgba(141, 211, 199, 0.01)'
+}
+])
+},
+data: [42, 38, 35, 40, 32]
+},
+{
+name: 'After Sonderful',
+type: 'line',
+smooth: true,
+lineStyle: {
+width: 3,
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+{
+offset: 0,
+color: 'rgba(87, 181, 231, 0.1)'
+},
+{
+offset: 1,
+color: 'rgba(87, 181, 231, 0.01)'
+}
+])
+},
+data: [85, 79, 82, 88, 76]
+}
+]
+};
+performanceChart.setOption(performanceOption);
+// Skills Development Chart
+const skillsChart = echarts.init(document.getElementById('skills-chart'));
+const skillsOption = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+top: '5%',
+left: 'center',
+textStyle: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Skills Developed',
+type: 'pie',
+radius: ['40%', '70%'],
+avoidLabelOverlap: false,
+itemStyle: {
+borderRadius: 10,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: false,
+position: 'center'
+},
+emphasis: {
+label: {
+show: true,
+fontSize: '18',
+fontWeight: 'bold'
+}
+},
+labelLine: {
+show: false
+},
+data: [
+{ value: 28, name: 'Communication', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+{ value: 22, name: 'Collaboration', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+{ value: 18, name: 'Leadership', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+{ value: 16, name: 'Creativity', itemStyle: { color: 'rgba(252, 141, 98, 1)' } },
+{ value: 16, name: 'Adaptability', itemStyle: { color: 'rgba(179, 179, 179, 1)' } }
+]
+}
+]
+};
+skillsChart.setOption(skillsOption);
+// Responsive charts
+window.addEventListener('resize', function() {
+studentOutcomesChart.resize();
+studentSkillsChart.resize();
+corporateServicesChart.resize();
+performanceChart.resize();
+skillsChart.resize();
+});
+});
+</script>
+</body>
+</html>
