@@ -38,6 +38,29 @@
         .testimonial-slider {
             scroll-behavior: smooth;
         }
+
+        .logogrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-auto-rows: 75px;
+            grid-gap: 4rem;
+        }
+        .logogrid__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logogrid__img {
+            object-fit: cover;
+            max-width: 120px;
+            max-height: 60px;
+            filter: grayscale(100%) contrast(25%);
+            transition: filter 0.3s ease;
+        }
+        .logogrid__img:hover {
+            filter: grayscale(0) contrast(100%);
+        }
+        
     </style>
 </head>
 <body class="bg-gray-50">
@@ -84,7 +107,6 @@
             </div>
         </div>
     </section>
-
     <!-- Value Proposition -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
@@ -244,116 +266,7 @@
                         <p class="mt-1 text-xs text-gray-500">94% increased innovative thinking</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Corporate Case Study -->
-            <div class="bg-white p-8 rounded-lg shadow-lg mb-16">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Case Study: Global Tech Firm</h3>
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="md:w-1/3">
-                        <img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20professional%20tech%20employees%20in%20a%20modern%20office%20space%20participating%20in%20a%20theatrical%20workshop%2C%20expressions%20of%20engagement%20and%20discovery%2C%20corporate%20setting%20with%20subtle%20tech%20elements%2C%20professional%20attire%2C%20facilitator%20guiding%20the%20group&width=400&height=300&seq=3&orientation=landscape" alt="Tech Company Case Study" class="rounded-lg shadow w-full h-auto object-cover object-top">
-                    </div>
-                    <div class="md:w-2/3">
-                        <p class="text-gray-600 mb-6">When a leading global technology company faced challenges with cross-departmental collaboration, they turned to Sonderful for a solution. Through a series of tailored immersive experiences, we helped break down silos and foster a culture of open communication.</p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">68%</p>
-                                <p class="text-sm text-gray-600">Increase in cross-team collaboration</p>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">42%</p>
-                                <p class="text-sm text-gray-600">Reduction in project delivery time</p>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">93%</p>
-                                <p class="text-sm text-gray-600">Participant satisfaction rate</p>
-                            </div>
-                        </div>
-                        
-                        <blockquote class="italic text-gray-700 border-l-4 border-primary pl-4">
-                            "Sonderful's approach was unlike anything we'd experienced before. By engaging our teams through immersive theatre, they created powerful moments of connection that transformed our workplace culture. The impact has been measurable and lasting."
-                            <footer class="mt-2 text-sm text-gray-600 not-italic">— Catherine Reynolds, Chief People Officer</footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Corporate Testimonials -->
-            <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">What Our Corporate Clients Say</h3>
-                
-                <div class="relative">
-                    <div class="testimonial-slider flex overflow-x-auto gap-6 pb-8 hide-scrollbar" id="corporate-testimonials">
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Michael Thornton</h4>
-                                    <p class="text-sm text-gray-600">Director of HR, Elevate Solutions</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"The leadership development program Sonderful created for our executive team was transformative. The immersive approach helped our leaders connect with their authentic selves and develop genuine empathy for their teams."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Priya Sharma</h4>
-                                    <p class="text-sm text-gray-600">Team Lead, Innovate Financial</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"After our merger, we struggled with cultural integration. Sonderful's team-building workshop helped us bridge divides and create a unified culture. Six months later, we're still seeing the positive effects."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">James Wilson</h4>
-                                    <p class="text-sm text-gray-600">CEO, Nexus Creative</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"As a creative agency, we thought we knew everything about innovation. Sonderful's workshop challenged our assumptions and helped us break through creative blocks. The results have been incredible."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-half-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="corporate-prev">
-                        <i class="ri-arrow-left-s-line ri-lg"></i>
-                    </button>
-                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="corporate-next">
-                        <i class="ri-arrow-right-s-line ri-lg"></i>
-                    </button>
-                </div>
-            </div>
+            </div>              
         </div>
     </section>
 
@@ -468,116 +381,7 @@
                         <p class="mt-1 text-xs text-gray-500">89% increased career confidence</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- University Success Story -->
-            <div class="bg-white p-8 rounded-lg shadow-lg mb-16">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Success Story: Westfield University</h3>
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="md:w-1/3">
-                        <img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20university%20students%20celebrating%20success%20after%20completing%20a%20theatrical%20workshop%2C%20campus%20environment%2C%20expressions%20of%20achievement%20and%20joy%2C%20academic%20setting%2C%20graduation-like%20atmosphere%2C%20young%20adults%20in%20casual%20attire%2C%20university%20buildings%20in%20background&width=400&height=300&seq=5&orientation=landscape" alt="University Success Story" class="rounded-lg shadow w-full h-auto object-cover object-top">
-                    </div>
-                    <div class="md:w-2/3">
-                        <p class="text-gray-600 mb-6">Westfield University partnered with Sonderful to address declining student engagement and prepare graduates for an increasingly competitive job market. Our semester-long program integrated with their curriculum to provide students with practical, experiential learning opportunities.</p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">76%</p>
-                                <p class="text-sm text-gray-600">Increase in student engagement</p>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">82%</p>
-                                <p class="text-sm text-gray-600">Improved graduate employment rates</p>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="text-3xl font-bold text-primary mb-1">94%</p>
-                                <p class="text-sm text-gray-600">Student satisfaction with program</p>
-                            </div>
-                        </div>
-                        
-                        <blockquote class="italic text-gray-700 border-l-4 border-primary pl-4">
-                            "Sonderful's program has transformed our approach to student development. By integrating immersive theatre experiences into our curriculum, we've seen remarkable improvements in student engagement, confidence, and career readiness. It's been a game-changer for our institution."
-                            <footer class="mt-2 text-sm text-gray-600 not-italic">— Dr. Eleanor Matthews, Dean of Student Affairs</footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- University Testimonials -->
-            <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">What Students & Educators Say</h3>
-                
-                <div class="relative">
-                    <div class="testimonial-slider flex overflow-x-auto gap-6 pb-8 hide-scrollbar" id="university-testimonials">
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
-                                    <p class="text-sm text-gray-600">Business Student, Class of 2025</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"The Sonderful workshop was unlike any class I've taken. It pushed me out of my comfort zone in the best possible way. I've always struggled with public speaking, but the techniques I learned have made me so much more confident."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Professor Thomas Chen</h4>
-                                    <p class="text-sm text-gray-600">Communications Department</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"Integrating Sonderful's program into our curriculum has revolutionized our teaching approach. Students are more engaged, more creative, and developing practical skills that traditional lectures simply can't provide."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-half-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-lg shadow-md min-w-[300px] md:min-w-[400px] flex-shrink-0">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                                    <i class="ri-user-line ri-lg text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Alex Washington</h4>
-                                    <p class="text-sm text-gray-600">Engineering Student, Class of 2024</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-4">"As an engineering student, I was skeptical about how theatre could help me. But the collaborative problem-solving skills I developed have been invaluable. I reference what I learned in job interviews all the time."</p>
-                            <div class="flex">
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                                <i class="ri-star-fill text-yellow-400"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="university-prev">
-                        <i class="ri-arrow-left-s-line ri-lg"></i>
-                    </button>
-                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition z-10" id="university-next">
-                        <i class="ri-arrow-right-s-line ri-lg"></i>
-                    </button>
-                </div>
-            </div>
+            </div>   
         </div>
     </section>
 
@@ -636,47 +440,45 @@
             </div>
         </div>
     </section>
+    <!-- Client section-->
+    <section id="client" class="py-20 bg-white">
+     <div class="container mx-auto px-4">
+        <ul class="logogrid">
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" class="logogrid__img" alt="Coca Cola">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="logogrid__img" alt="Google">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" class="logogrid__img" alt="AirBnB">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" class="logogrid__img" alt="Spotify">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/de/f/f9/Guinness_Logo.svg" class="logogrid__img" alt="Guinness">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" class="logogrid__img" alt="Audi">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" class="logogrid__img" alt="Nike">
+            </li>
+            <li class="logogrid__item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logogrid__img" alt="Netflix">
+            </li>
+        </ul>
+    </div>   
+
+    </section>
     <!-- About Us -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Sonderful</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">We're a team of theatre professionals, psychologists, and educators passionate about creating transformative experiences.</p>
             </div>
-            
-            <div class="flex flex-col lg:flex-row gap-12 mb-16">
-                <div class="lg:w-1/2">
-                    <img src="https://readdy.ai/api/search-image?query=diverse%20team%20of%20professional%20facilitators%20and%20theatre%20practitioners%20in%20a%20creative%20meeting%2C%20mix%20of%20ages%20and%20ethnicities%2C%20collaborative%20workspace%2C%20artistic%20environment%2C%20expressions%20of%20creativity%20and%20engagement%2C%20modern%20office%20with%20theatrical%20elements%2C%20professional%20casual%20attire&width=600&height=400&seq=6&orientation=landscape" alt="Sonderful Team" class="rounded-lg shadow-lg w-full h-auto object-cover object-top">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
-                    <p class="text-gray-600 mb-6">Sonderful was born from a simple observation: the most powerful learning happens through experience, not instruction. Our founders, a theatre director and an organizational psychologist, combined their expertise to create immersive experiences that drive meaningful change.</p>
-                    <p class="text-gray-600 mb-6">Since our founding in 2018, we've worked with organizations across the globe, from Fortune 500 companies to leading universities. Our approach is grounded in research but delivered through art, creating memorable experiences that inspire lasting transformation.</p>
-                    
-                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Our Philosophy</h4>
-                    <div class="mb-6">
-                        <div class="flex items-start mb-3">
-                            <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
-                                <i class="ri-heart-line"></i>
-                            </div>
-                            <p class="text-gray-600"><span class="font-medium text-gray-900">Emotional Connection</span>: We believe that learning must engage the heart as well as the mind.</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
-                                <i class="ri-team-line"></i>
-                            </div>
-                            <p class="text-gray-600"><span class="font-medium text-gray-900">Collaborative Growth</span>: True development happens in community, not in isolation.</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-1 flex-shrink-0">
-                                <i class="ri-lightbulb-line"></i>
-                            </div>
-                            <p class="text-gray-600"><span class="font-medium text-gray-900">Creative Innovation</span>: The most powerful solutions emerge when we think beyond conventional boundaries.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <!-- Team Section -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Meet Our Team</h3>
@@ -864,7 +666,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
