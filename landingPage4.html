@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonderful - Learning, Growth & Professional Development</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#008080", secondary: "#FFD700" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      }
+      .hero-section {
+      background-image: url('https://readdy.ai/api/search-image?query=A%20serene%20and%20inspiring%20educational%20environment%20with%20soft%20teal%20green%20and%20turquoise%20blue%20gradient%20background.%20The%20right%20side%20shows%20diverse%20professionals%20collaborating%2C%20learning%2C%20and%20growing%20together.%20The%20image%20has%20a%20clean%2C%20modern%20aesthetic%20with%20subtle%20lotus%20flower%20motifs%20integrated%20into%20the%20design.%20The%20left%20side%20has%20ample%20clean%20space%20for%20text%20overlay.&width=1920&height=1080&seq=hero1&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      .mission-bg {
+      background-image: url('https://readdy.ai/api/search-image?query=Abstract%20background%20with%20soft%20flowing%20patterns%20in%20teal%20green%2C%20mustard%20yellow%2C%20and%20turquoise%20blue%20colors.%20The%20design%20is%20minimal%2C%20elegant%20and%20suggests%20growth%2C%20transformation%20and%20learning.%20Perfect%20for%20a%20professional%20development%20company%20background%20with%20subtle%20lotus-inspired%20elements.&width=1200&height=800&seq=mission1&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      .program-card:hover {
+      transform: translateY(-5px);
+      }
+      .team-member:hover .member-info {
+      opacity: 1;
+      }
+      .member-info {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      }
+      input:focus, textarea:focus {
+      outline: none;
+      border-color: #008080;
+      }
+      .custom-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #008080;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      }
+      .custom-checkbox:checked {
+      background-color: #008080;
+      }
+      .custom-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .program-toggle input:checked + .toggle-slider {
+      background-color: #008080;
+      }
+      .program-toggle input:checked + .toggle-slider:before {
+      transform: translateX(26px);
+      }
+      .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+      }
+      .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header & Navigation -->
+    <header
+      class="fixed w-full z-50 transition-all duration-300 bg-white bg-opacity-95 shadow-md"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="text-3xl font-['Pacifico'] text-primary flex items-center"
+            >
+              <span class="w-10 h-10 flex items-center justify-center mr-2">
+                <i class="ri-flower-line ri-xl"></i>
+              </span>
+              Sonderful
+            </a>
+          </div>
+          <nav class="hidden md:flex space-x-10">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-primary font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-primary font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#programs"
+              class="text-gray-700 hover:text-primary font-medium transition-colors"
+              >Programs</a
+            >
+            <a
+              href="#team"
+              class="text-gray-700 hover:text-primary font-medium transition-colors"
+              >Team</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary font-medium transition-colors"
+              >Contact</a
+            >
+          </nav>
+          <div class="hidden md:flex items-center space-x-4">
+            <button
+              class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+            >
+              Schedule a Consultation
+            </button>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="text-gray-700 hover:text-primary focus:outline-none">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-menu-line ri-2x"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden fixed inset-0 z-40 bg-white p-6"
+      id="mobile-menu"
+    >
+      <div class="flex justify-end">
+        <button
+          class="text-gray-700 hover:text-primary focus:outline-none"
+          id="close-menu"
+        >
+          <div class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-close-line ri-2x"></i>
+          </div>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-6 mt-10 items-center">
+        <a
+          href="#home"
+          class="text-gray-700 hover:text-primary font-medium text-xl"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-gray-700 hover:text-primary font-medium text-xl"
+          >About</a
+        >
+        <a
+          href="#programs"
+          class="text-gray-700 hover:text-primary font-medium text-xl"
+          >Programs</a
+        >
+        <a
+          href="#team"
+          class="text-gray-700 hover:text-primary font-medium text-xl"
+          >Team</a
+        >
+        <a
+          href="#contact"
+          class="text-gray-700 hover:text-primary font-medium text-xl"
+          >Contact</a
+        >
+        <button
+          class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all mt-4 whitespace-nowrap"
+        >
+          Schedule a Consultation
+        </button>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-white to-primary/5"
+    >
+      <div class="container mx-auto px-6 py-20 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2 text-left">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+              Transforming
+              <span class="text-primary">Professional Development</span> for the
+              Modern Era
+            </h1>
+            <p class="text-xl text-gray-700 mb-12 leading-relaxed">
+              Empowering organizations with innovative learning experiences that
+              enhance leadership capabilities and drive excellence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <button
+                class="bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap group"
+              >
+                Schedule Consultation
+                <i
+                  class="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1"
+                ></i>
+              </button>
+              <button
+                class="bg-white border-2 border-primary text-primary px-8 py-4 rounded-button font-medium hover:bg-primary hover:text-white transition-all whitespace-nowrap"
+              >
+                Explore Programs
+              </button>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=Modern%20abstract%203D%20illustration%20showing%20professional%20development%20and%20growth%20concept.%20Featuring%20geometric%20shapes%2C%20flowing%20lines%2C%20and%20a%20sophisticated%20color%20palette%20of%20teal%20and%20white.%20Clean%2C%20minimalist%20design%20with%20subtle%20gradients%20and%20professional%20aesthetics.&width=800&height=600&seq=hero2&orientation=landscape"
+              alt="Professional Development Concept"
+              class="w-full h-auto rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 relative overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+                >
+                  <i class="ri-building-4-line text-primary ri-2x"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-2">120+</h3>
+                <p class="text-gray-600">
+                  Organizations Empowered Through Our Programs
+                </p>
+              </div>
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+                >
+                  <i class="ri-group-line text-primary ri-2x"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-2">15,000+</h3>
+                <p class="text-gray-600">
+                  Professionals Transformed Through Learning
+                </p>
+              </div>
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+                >
+                  <i class="ri-global-line text-primary ri-2x"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-2">28</h3>
+                <p class="text-gray-600">
+                  Countries Reached with Global Impact
+                </p>
+              </div>
+              <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+                >
+                  <i class="ri-award-line text-primary ri-2x"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-2">97%</h3>
+                <p class="text-gray-600">
+                  Client Satisfaction and Success Rate
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative">
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full border-[30px] border-primary/10"
+            ></div>
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full border-[30px] border-primary/20"
+            ></div>
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20development%20illustration%20with%20abstract%20geometric%20patterns%20showing%20growth%2C%20learning%2C%20and%20personal%20development.%20Features%20flowing%20lines%2C%20ascending%20steps%2C%20and%20interconnected%20elements%20in%20teal%20and%20white.%20Modern%2C%20clean%20design%20with%20educational%20and%20growth%20symbolism.&width=600&height=600&seq=growth1&orientation=squarish"
+              alt="Growth and Development"
+              class="relative z-10 w-[250px] h-[250px] rounded-full object-cover mx-auto shadow-xl"
+            />
+            <div class="absolute top-0 right-0">
+              <img
+                src="https://readdy.ai/api/search-image?query=Abstract%20pattern%20illustration%20representing%20personal%20growth%20and%20learning%2C%20with%20flowing%20organic%20shapes%20and%20educational%20symbols.%20Soft%20teal%20and%20white%20color%20scheme%20with%20modern%20minimalist%20style.&width=200&height=200&seq=pattern1&orientation=squarish"
+                alt="Learning Pattern"
+                class="w-24 h-24 rounded-full shadow-lg"
+              />
+            </div>
+            <div class="absolute bottom-0 left-0">
+              <img
+                src="https://readdy.ai/api/search-image?query=Abstract%20pattern%20illustration%20showing%20professional%20development%20journey%20with%20interconnected%20elements%20and%20growth%20symbols.%20Clean%2C%20modern%20design%20in%20teal%20and%20white.&width=200&height=200&seq=pattern2&orientation=squarish"
+                alt="Development Pattern"
+                class="w-24 h-24 rounded-full shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mission & Vision Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our Mission & Vision
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2 mission-bg rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-white bg-opacity-95 p-8 h-full">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6"
+              >
+                <i class="ri-compass-3-line ri-2x text-primary"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+              <p class="text-gray-700 mb-6">
+                At Sonderful, our mission is to cultivate transformative
+                learning experiences that empower individuals and teams to reach
+                their highest potential. Like the lotus flower that symbolizes
+                our brand, we believe in the journey from depth to
+                enlightenment, helping our clients navigate challenges and
+                emerge stronger.
+              </p>
+              <p class="text-gray-700">
+                We are committed to creating innovative programs that blend
+                scientific research with creative approaches, fostering
+                environments where authentic growth and professional development
+                flourish.
+              </p>
+            </div>
+          </div>
+          <div class="md:w-1/2 mission-bg rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-white bg-opacity-95 p-8 h-full">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6"
+              >
+                <i class="ri-eye-line ri-2x text-primary"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+              <p class="text-gray-700 mb-6">
+                We envision a world where educational and corporate environments
+                are transformed through programs that honor both intellectual
+                and emotional intelligence. Sonderful aims to be the catalyst
+                for this transformation, creating ripples of positive change
+                across organizations globally.
+              </p>
+              <p class="text-gray-700">
+                By 2030, we aspire to impact over 1 million professionals and
+                students, creating a community of leaders who approach
+                challenges with creativity, resilience, and collaborative
+                spirit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+            >Our Programs</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Innovative Learning Solutions
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Transform your organization through our carefully crafted programs
+            that blend creativity with professional development.
+          </p>
+        </div>
+        <!-- Program Toggle -->
+        <div class="flex justify-center mb-12">
+          <div class="inline-flex p-1 bg-white rounded-full shadow-lg">
+            <button
+              id="university-btn"
+              class="relative px-6 py-3 rounded-full bg-primary text-white font-medium transition-all duration-300 whitespace-nowrap"
+            >
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="ri-school-line"></i>
+                Universities
+              </span>
+            </button>
+            <button
+              id="corporate-btn"
+              class="relative px-6 py-3 rounded-full text-gray-700 font-medium transition-all duration-300 whitespace-nowrap"
+            >
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="ri-building-4-line"></i>
+                Corporate
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Programs Grid -->
+        <div class="flex justify-center mb-10">
+          
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Program 1: Leader's Voice -->
+          <div
+            class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-blue-400 flex items-center justify-center"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-white bg-opacity-20 rounded-full"
+              >
+                <i class="ri-mic-line ri-2x text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Leader's Voice
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Develop authentic communication skills and presence that inspire
+                and influence. This program helps leaders find their unique
+                voice and leverage it for maximum impact.
+              </p>
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Public speaking mastery</span>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Storytelling techniques</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Authentic presence development</span
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <!-- Program 2: The Ground and Flow -->
+          <div
+            class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-teal-500 to-primary flex items-center justify-center"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-white bg-opacity-20 rounded-full"
+              >
+                <i class="ri-flow-chart-line ri-2x text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                The Ground and Flow
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Build resilience and adaptability in changing environments. This
+                program teaches techniques to stay grounded while navigating
+                uncertainty with confidence.
+              </p>
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Stress management techniques</span
+                  >
+                </div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Adaptive leadership skills</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Mindfulness practices</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <!-- Program 3: The Ensemble Advantage -->
+          <div
+            class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-yellow-400 flex items-center justify-center"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-white bg-opacity-20 rounded-full"
+              >
+                <i class="ri-team-line ri-2x text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                The Ensemble Advantage
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Transform group dynamics to create high-performing teams. This
+                program leverages collaborative intelligence to achieve
+                extraordinary results together.
+              </p>
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Collaborative problem-solving</span
+                  >
+                </div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Team synergy development</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Collective creativity techniques</span
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <!-- Program 4: Embodied Archetypes -->
+          <div
+            class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-white bg-opacity-20 rounded-full"
+              >
+                <i class="ri-user-star-line ri-2x text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Embodied Archetypes
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Explore different leadership styles through archetypal
+                frameworks. This program helps individuals identify their
+                natural strengths and expand their leadership repertoire.
+              </p>
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Leadership style assessment</span>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Archetypal pattern recognition</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Versatile leadership development</span
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <!-- Program 5: Lumina Spark -->
+          <div
+            class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-blue-400 to-cyan-500 flex items-center justify-center"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-white bg-opacity-20 rounded-full"
+              >
+                <i class="ri-lightbulb-flash-line ri-2x text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Lumina Spark</h3>
+              <p class="text-gray-600 mb-4">
+                Gain deep insights into personality and communication
+                preferences. This program uses psychometric tools to enhance
+                self-awareness and interpersonal effectiveness.
+              </p>
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Personality assessment</span>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700"
+                    >Communication style optimization</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-700">Team dynamics mapping</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Impact Statistics Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-teal-600 text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
+          <p class="text-lg text-white text-opacity-90 max-w-3xl mx-auto">
+            Transforming organizations and individuals through innovative
+            learning experiences.
+          </p>
+          <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white bg-opacity-10 p-8 rounded-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-20 rounded-full mx-auto mb-4"
+            >
+              <i class="ri-building-4-line ri-2x"></i>
+            </div>
+            <h3 class="text-4xl font-bold mb-2">120+</h3>
+            <p class="text-white text-opacity-90">Organizations Served</p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-8 rounded-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-20 rounded-full mx-auto mb-4"
+            >
+              <i class="ri-user-star-line ri-2x"></i>
+            </div>
+            <h3 class="text-4xl font-bold mb-2">15,000+</h3>
+            <p class="text-white text-opacity-90">Professionals Trained</p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-8 rounded-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-20 rounded-full mx-auto mb-4"
+            >
+              <i class="ri-global-line ri-2x"></i>
+            </div>
+            <h3 class="text-4xl font-bold mb-2">28</h3>
+            <p class="text-white text-opacity-90">Countries Reached</p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-8 rounded-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-20 rounded-full mx-auto mb-4"
+            >
+              <i class="ri-award-line ri-2x"></i>
+            </div>
+            <h3 class="text-4xl font-bold mb-2">97%</h3>
+            <p class="text-white text-opacity-90">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Meet Our Team
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our diverse team of experts brings together decades of experience in
+            education, leadership development, and organizational psychology.
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Team Member 1 -->
+          <div
+            class="team-member relative overflow-hidden rounded-lg shadow-lg"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20confident%20female%20executive%20with%20short%20dark%20hair%20and%20glasses%2C%20smiling%20warmly%20at%20the%20camera.%20She%20has%20a%20polished%20appearance%20with%20a%20blazer%2C%20against%20a%20neutral%20background.%20The%20image%20is%20high%20quality%2C%20well-lit%2C%20and%20professional%20looking.&width=600&height=600&seq=team1&orientation=squarish"
+              alt="Dr. Emily Chen"
+              class="w-full h-80 object-cover object-top"
+            />
+            <div class="p-6 bg-white">
+              <h3 class="text-xl font-bold text-gray-800 mb-1">
+                Dr. Emily Chen
+              </h3>
+              <p class="text-primary font-medium mb-3">Founder & CEO</p>
+              <p class="text-gray-600">
+                Former professor of Organizational Psychology with 15+ years of
+                experience in leadership development and team dynamics.
+              </p>
+            </div>
+            <div
+              class="member-info absolute inset-0 bg-primary bg-opacity-90 p-6 flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">Dr. Emily Chen</h3>
+              <p class="text-white text-opacity-90 mb-4">
+                "My passion is helping individuals discover their authentic
+                leadership voice and creating environments where teams can truly
+                thrive."
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-mail-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div
+            class="team-member relative overflow-hidden rounded-lg shadow-lg"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Black%20man%20with%20a%20warm%20smile%20wearing%20a%20business%20casual%20outfit%20with%20a%20blazer.%20He%20has%20short%20hair%20and%20appears%20confident%20and%20approachable%20against%20a%20neutral%20background.%20The%20image%20is%20high%20quality%2C%20well-lit%2C%20and%20professional%20looking.&width=600&height=600&seq=team2&orientation=squarish"
+              alt="Marcus Johnson"
+              class="w-full h-80 object-cover object-top"
+            />
+            <div class="p-6 bg-white">
+              <h3 class="text-xl font-bold text-gray-800 mb-1">
+                Marcus Johnson
+              </h3>
+              <p class="text-primary font-medium mb-3">
+                Chief Learning Officer
+              </p>
+              <p class="text-gray-600">
+                Former corporate executive with expertise in adult learning
+                theory and curriculum development for Fortune 500 companies.
+              </p>
+            </div>
+            <div
+              class="member-info absolute inset-0 bg-primary bg-opacity-90 p-6 flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">Marcus Johnson</h3>
+              <p class="text-white text-opacity-90 mb-4">
+                "I believe that transformative learning happens when we connect
+                theory with practice in ways that resonate with real-world
+                challenges."
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-mail-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 3 -->
+          <div
+            class="team-member relative overflow-hidden rounded-lg shadow-lg"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Asian%20woman%20with%20long%20dark%20hair%20wearing%20professional%20business%20attire.%20She%20has%20a%20confident%20and%20friendly%20expression%2C%20against%20a%20neutral%20background.%20The%20image%20is%20high%20quality%2C%20well-lit%2C%20and%20professional%20looking.&width=600&height=600&seq=team3&orientation=squarish"
+              alt="Dr. Sophia Kim"
+              class="w-full h-80 object-cover object-top"
+            />
+            <div class="p-6 bg-white">
+              <h3 class="text-xl font-bold text-gray-800 mb-1">
+                Dr. Sophia Kim
+              </h3>
+              <p class="text-primary font-medium mb-3">Director of Research</p>
+              <p class="text-gray-600">
+                Researcher and author specializing in innovative approaches to
+                professional development and organizational change.
+              </p>
+            </div>
+            <div
+              class="member-info absolute inset-0 bg-primary bg-opacity-90 p-6 flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">Dr. Sophia Kim</h3>
+              <p class="text-white text-opacity-90 mb-4">
+                "My research focuses on bridging the gap between academic
+                insights and practical applications that create lasting
+                behavioral change."
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-opacity-30"
+                >
+                  <i class="ri-mail-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <button
+            class="bg-white text-primary border-2 border-primary px-8 py-3 rounded-button font-medium hover:bg-primary hover:text-white transition-all whitespace-nowrap"
+          >
+            View Full Team
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            What Our Clients Say
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Hear from universities and corporate partners who have experienced
+            the Sonderful difference.
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-3x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "Sonderful's Leader's Voice program transformed our executive
+              team's communication style. We've seen measurable improvements in
+              team cohesion and client engagement since implementing their
+              techniques."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4"
+              >
+                <i class="ri-building-4-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Jennifer Blackwell</h4>
+                <p class="text-gray-600">
+                  Chief HR Officer, Nexus Technologies
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-3x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "The Ensemble Advantage workshop created a fundamental shift in
+              how our faculty approaches collaboration. The techniques are
+              practical, evidence-based, and have had lasting impact on our
+              department."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4"
+              >
+                <i class="ri-school-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Dr. Michael Ramirez</h4>
+                <p class="text-gray-600">
+                  Dean, School of Business, Westlake University
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-3x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "Sonderful's Lumina Spark program provided invaluable insights
+              into our team dynamics. We now have a shared language for
+              discussing work styles and have seen significant improvements in
+              cross-functional collaboration."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4"
+              >
+                <i class="ri-building-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Olivia Richardson</h4>
+                <p class="text-gray-600">
+                  Director of Talent Development, Global Innovations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Ready to transform your organization's approach to learning and
+            development? Contact us to schedule a consultation.
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2">
+            <form class="bg-white p-8 rounded-lg shadow-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-700"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-700"
+                    placeholder="Your email"
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="organization"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Organization</label
+                >
+                <input
+                  type="text"
+                  id="organization"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-700"
+                  placeholder="Your organization"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="interest"
+                  class="block text-gray-700 font-medium mb-2"
+                  >I'm interested in</label
+                >
+                <div class="relative">
+                  <select
+                    id="interest"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-700 appearance-none pr-8"
+                  >
+                    <option value="">Select a program</option>
+                    <option value="leaders-voice">Leader's Voice</option>
+                    <option value="ground-flow">The Ground and Flow</option>
+                    <option value="ensemble">The Ensemble Advantage</option>
+                    <option value="archetypes">Embodied Archetypes</option>
+                    <option value="lumina">Lumina Spark</option>
+                    <option value="custom">Custom Solution</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                  >
+                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-700"
+                  placeholder="Tell us about your needs"
+                ></textarea>
+              </div>
+              <div class="flex items-center mb-6">
+                <input type="checkbox" id="subscribe" class="custom-checkbox" />
+                <label for="subscribe" class="ml-2 text-gray-700"
+                  >Subscribe to our newsletter</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+              <div class="mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">
+                  Contact Information
+                </h3>
+                <div class="flex items-start mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-map-pin-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-700">
+                      123 Innovation Way<br />
+                      San Francisco, CA 94107<br />
+                      United States
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-mail-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-700">
+                      info@sonderful.com<br />
+                      support@sonderful.com
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-700">
+                      +1 (415) 555-1234<br />
+                      +1 (415) 555-5678
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">
+                  Office Hours
+                </h3>
+                <div class="flex justify-between mb-2">
+                  <span class="text-gray-700">Monday - Friday:</span>
+                  <span class="text-gray-700">9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-gray-700">Saturday:</span>
+                  <span class="text-gray-700">10:00 AM - 4:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700">Sunday:</span>
+                  <span class="text-gray-700">Closed</span>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">
+                  Connect With Us
+                </h3>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary hover:bg-opacity-20"
+                  >
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary hover:bg-opacity-20"
+                  >
+                    <i class="ri-twitter-fill"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary hover:bg-opacity-20"
+                  >
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary hover:bg-opacity-20"
+                  >
+                    <i class="ri-instagram-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-primary">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+              Stay Updated
+            </h2>
+            <p class="text-white text-opacity-90">
+              Subscribe to our newsletter for the latest insights on leadership
+              development and team dynamics.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <form class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="flex-grow px-4 py-3 rounded-button border-none text-gray-700"
+              />
+              <button
+                type="submit"
+                class="bg-secondary text-gray-800 px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div>
+            <a
+              href="#"
+              class="text-3xl font-['Pacifico'] text-white flex items-center mb-6"
+            >
+              <span class="w-10 h-10 flex items-center justify-center mr-2">
+                <i class="ri-flower-line ri-xl"></i>
+              </span>
+              Sonderful
+            </a>
+            <p class="text-gray-400 mb-6">
+              Transforming learning experiences through innovative programs that
+              foster growth and professional development.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-gray-700"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-gray-700"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-gray-700"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-gray-700"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Programs</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Leader's Voice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >The Ground and Flow</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >The Ensemble Advantage</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Embodied Archetypes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Lumina Spark</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span class="text-gray-400"
+                  >123 Innovation Way, San Francisco, CA 94107</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <span class="text-gray-400">info@sonderful.com</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <span class="text-gray-400">+1 (415) 555-1234</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2025 Sonderful. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("header");
+        const mobileMenuButton = document.querySelector(".md\\:hidden button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuButton = document.getElementById("close-menu");
+        // Sticky header
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            header.classList.add("shadow-md");
+          } else {
+            header.classList.remove("shadow-md");
+          }
+        });
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("hidden");
+        });
+        closeMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+        });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script id="program-tabs-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const universityBtn = document.getElementById("university-btn");
+        const corporateBtn = document.getElementById("corporate-btn");
+        corporateBtn.addEventListener("click", function () {
+          universityBtn.classList.remove("bg-primary", "text-white");
+          universityBtn.classList.add("text-gray-700");
+          corporateBtn.classList.add("bg-primary", "text-white");
+          corporateBtn.classList.remove("text-gray-700");
+          // Here you would toggle program content visibility
+          // For demonstration purposes only
+        });
+        universityBtn.addEventListener("click", function () {
+          corporateBtn.classList.remove("bg-primary", "text-white");
+          corporateBtn.classList.add("text-gray-700");
+          universityBtn.classList.add("bg-primary", "text-white");
+          universityBtn.classList.remove("text-gray-700");
+          // Here you would toggle program content visibility
+          // For demonstration purposes only
+        });
+      });
+    </script>
+    <script id="form-validation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.querySelector("form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Simple validation
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const message = document.getElementById("message");
+            let isValid = true;
+            if (name && name.value.trim() === "") {
+              isValid = false;
+              name.classList.add("border-red-500");
+            } else if (name) {
+              name.classList.remove("border-red-500");
+            }
+            if (email && (email.value.trim() === "" || !email.value.includes("@"))) {
+              isValid = false;
+              email.classList.add("border-red-500");
+            } else if (email) {
+              email.classList.remove("border-red-500");
+            }
+            if (message && message.value.trim() === "") {
+              isValid = false;
+              message.classList.add("border-red-500");
+            } else if (message) {
+              message.classList.remove("border-red-500");
+            }
+            if (isValid) {
+              // Form submission would go here
+              alert("Form submitted successfully!");
+              contactForm.reset();
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
